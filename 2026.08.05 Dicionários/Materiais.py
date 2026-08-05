@@ -29,9 +29,13 @@ produtos = [{"nome": "Argamassa",
            },
 ]  
 
+print()
+
 # Todos os produtos
 print(produtos)
 
+for produto in produtos:
+    print(f"{produto["nome"]} - R${produto["preco"]}")
 
 
 
