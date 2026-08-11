@@ -6,21 +6,54 @@
 
 
 import subprocess
+import random
+
+# numero = random.randint(1, 1000)
+
+# Baco de dados
+database = {
+    "1": { "name": "Joca da Silva", "contact": "(21) 998877665"},
+    "120": { "name": "Mariana Sirilampo", "contact": "mariana@sirilampo.com.br"}
+}
 
 def cls():
     subprocess.run("cls", shell=True)
 
 def new_contact():
-    pass
+    cls()
+    print("[ AGENDA FURRECA - NOVO CONTATO ]")
+
+    # ...
+
+    input("Tecle [Enter] para continuar")
+    main()
 
 def list_contacts():
-    pass
+    cls()
+    print("[ AGENDA FURRECA - LISTA CONTATOS ]")
+
+    # ...
+    
+    input("Tecle [Enter] para continuar")
+    main()
 
 def edit_contact():
-    pass
+    cls()
+    print("[ AGENDA FURRECA - EDITA CONTATO ]")
+
+    # ...
+    
+    input("Tecle [Enter] para continuar")
+    main()
 
 def delete_contact():
-    pass
+    cls()
+    print("[ AGENDA FURRECA - APAGA CONTATO ]")
+
+    # ...
+    
+    input("Tecle [Enter] para continuar")
+    main()
 
 # Programa principal
 def main(erro = str()):
@@ -28,7 +61,8 @@ def main(erro = str()):
     while True:
         cls() 
         print("[ AGENDA FURRECA - MENU PRINCIPAL ]")
-        print(erro)
+        if erro:
+            print(erro)
         erro = str()
         print('''
 Opções:
@@ -42,16 +76,16 @@ Opções:
         
         opcao = input("Escolha uma opção: ")
 
-        match int(opcao):
-            case 1:
+        match opcao:
+            case "1":
                 new_contact()
-            case 2:
+            case "2":
                 list_contacts()
-            case 3:
+            case "3":
                 edit_contact()
-            case 4:
+            case "4":
                 delete_contact()
-            case 0:
+            case "0":
                 cls()
                 print("\nAcabou!")
                 exit()
