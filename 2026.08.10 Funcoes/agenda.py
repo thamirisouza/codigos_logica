@@ -22,9 +22,16 @@ def cls():
 def new_contact():
     cls()
     print("[ AGENDA FURRECA - NOVO CONTATO ]")
+    
+    print("\nDigite os dados do contato:\n")
 
-    # ...
+    name = input(" • Nome: ")
+    contact = input(" • Contato: ")
+    key = str(random.randint(1, 1000))
 
+    database[key] = dict(name = name, contact = contact)
+
+    print(f"\nUsuário com ID {key} adicionado!")
     input("Tecle [Enter] para continuar")
     main()
 
@@ -64,6 +71,8 @@ def main(erro = str()):
         if erro:
             print(erro)
         erro = str()
+        # Debug
+        print(database)
         print('''
 Opções:
 
