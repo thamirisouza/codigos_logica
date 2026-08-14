@@ -4,6 +4,9 @@
 # Versão 2026.08.14                        #
 ############################################
 
+import os
+
+
 
 def somar():
     n1 = float(input("Digite o primeiro número: "))
